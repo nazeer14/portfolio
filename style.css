@@ -132,7 +132,7 @@ textarea:focus-visible {
 }
 
 .brand-sub {
-  font-size: 11px;
+  font-size: 12px;
   opacity: 0.7;
 }
 
@@ -141,7 +141,7 @@ textarea:focus-visible {
   display: block;
   margin-top: 4px;
   color: var(--muted);
-  font: 500 10px/1.2 var(--sans);
+  font: 500 12px/1.2 var(--sans);
   letter-spacing: .1em;
   text-transform: uppercase;
 }
@@ -210,7 +210,7 @@ nav .nav-cta span {
 .eyebrow {
   margin: 0 0 22px;
   color: #53665e;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: .16em;
 }
@@ -308,7 +308,7 @@ h1 span {
   padding-top: 19px;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .hero-meta span+span::before {
@@ -382,7 +382,7 @@ h1 span {
 
 .window-rule {
   height: 1px;
-  margin-bottom: 11px;
+  margin-bottom: 12px;
   background: #ffffff35;
 }
 
@@ -393,7 +393,7 @@ h1 span {
   padding: 12px 0;
   border-bottom: 1px solid #ffffff20;
   color: #c4d0c8;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .window-row b {
@@ -408,7 +408,7 @@ h1 span {
   gap: 13px;
   margin-top: 15px;
   color: #53635a;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .note-number {
@@ -419,7 +419,7 @@ h1 span {
   border-radius: 50%;
   background: var(--accent);
   color: var(--ink);
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 800;
 }
 
@@ -503,7 +503,7 @@ h1 span {
 .principles span {
   grid-row: span 2;
   color: #7b913e;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -557,13 +557,13 @@ h1 span {
   margin-bottom: 30px;
   background: var(--accent);
   color: var(--ink);
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 800;
 }
 
 .skill-card h3 {
-  margin-bottom: 11px;
-  font-size: 22px;
+  margin-bottom: 12px;
+  font-size: 24px;
   font-weight: 700;
 }
 
@@ -584,7 +584,7 @@ h1 span {
   padding: 5px 9px;
   border: 1px solid #d9e0d7;
   color: #52625a;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.4;
 }
 
@@ -757,14 +757,14 @@ h1 span {
   display: block;
   margin-top: 18px;
   color: #68776e;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .project-note {
   max-width: 850px;
   margin: 28px 0 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 .project-links {
   margin-top: 22px;
@@ -885,7 +885,7 @@ h1 span {
   display: block;
   margin-top: 42px;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.2;
 }
 
@@ -1458,7 +1458,7 @@ h1 span {
   height: 35px;
   border-radius: 50%;
   background: var(--accent);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .visual-ai {
@@ -1562,7 +1562,7 @@ h1 span {
 
 .service-row>span {
   color: #7d923d;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 
@@ -1576,7 +1576,7 @@ h1 span {
 .service-row p {
   margin: 0;
   color: var(--muted);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .service-row>b {
@@ -1631,8 +1631,8 @@ h1 span {
 
 .contact-phone {
   margin-top: 13px;
-  color: #c2d0c6;
-  font-size: 13px;
+  color: #fefffe;
+  font-size: 16px;
 }
 
 .contact-form {
@@ -1647,7 +1647,7 @@ h1 span {
   display: grid;
   gap: 7px;
   color: #d0dbd1;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .contact-form input,
@@ -1685,13 +1685,13 @@ h1 span {
 }
 
 .button-light:hover {
-  background: #d8fa90;
+  background: #d390fa;
 }
 
 .form-note {
   margin: -5px 0 0;
   color: #b7c8bc;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .site-footer {
@@ -1709,7 +1709,7 @@ h1 span {
 }
 
 .footer-brand {
-  font: 800 14px var(--serif);
+  font: 800 16px var(--serif);
 }
 
 .footer-brand span {
@@ -1719,13 +1719,13 @@ h1 span {
 .footer-inner p {
   margin: 0;
   color: #a9bcb0;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .footer-links {
   display: flex;
   gap: 18px;
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .footer-links a:hover {
@@ -1734,7 +1734,7 @@ h1 span {
 
 .footer-inner>small {
   color: #a9bcb0;
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .reveal {
@@ -1895,7 +1895,7 @@ h1 span {
   }
 
   .filter-button {
-    font-size: 10px;
+    font-size: 12px;
   }
 
   .project-grid {
