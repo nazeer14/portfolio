@@ -1,53 +1,94 @@
+/* Shaik Nazeer portfolio — interactions */
+"use strict";
 
-const $ = (s, r = document) => r.querySelector(s), $$ = (s, r = document) => [...r.querySelectorAll(s)];
-/* ===== EDIT YOUR CONTENT HERE ===== */
-const J = [["Learning", "Where it started", "Describe how you got into code and what first hooked you."], ["First builds", "Making things", "Describe your first websites and what they taught you."], ["Freelancing", "Working for clients", "Describe early client work and lessons about scope and trust."], ["Professional role", "Inside a team", "Describe your first company role and responsibilities."], ["Digital marketing", "Getting found", "Describe your move into SEO, Google Business Profile and Ads."], ["Full stack", "Java and Spring Boot", "Describe the applications you now build end to end."], ["Next", "Where I am going", "Describe your goals: architecture, cloud, leading projects."]];
-const S = { "Build": ["Web Development:90", "JavaScript:80", "HTML:92", "CSS:88", "WordPress:88", "WooCommerce:80", "UI/UX:70"], "Engineer": ["Java:85", "Spring Boot:82", "REST APIs:84", "Hibernate:75", "JPA:75", "SQL:78", "Git:85", "GitHub:85"], "Grow": ["SEO:82", "Google Business Profile:88", "Google Ads:72", "Meta Ads:90", "ADs:85", "Social Media Marketing:70", "Content Strategy:72"] };
-const W = [{ n: "Property website", k: "Property listings", c: "Real estate business", d: "A listings site with search, enquiry capture and a clean editing flow for the owner.", t: "WordPress, Custom theme, SEO", r: "Design and development", f: "Filtered listings, enquiry forms, map embed", o: "Add a measured outcome", l: "#" }, { n: "Online Shopping", k: "WooCommerce", c: "Retail business", d: "A WooCommerce store built around a short checkout path and fast pages.", t: "WooCommerce, PHP, JavaScript", r: "Build and optimisation", f: "Catalogue, payments, order emails", o: "Add a measured outcome", l: "#" }, { n: "Booking system", k: "Custom solution", c: "Service business", d: "A booking flow that replaced phone and message scheduling.", t: "JavaScript, WordPress, APIs", r: "Planning and build", f: "Slot selection, confirmations, admin view", o: "Add a measured outcome", l: "#" }];
-const M = [{ n: "Local business visibility", b: "Add the starting state: profile gaps, ranking, enquiries.", a: "Add the end state: what changed and how you know.", v: [22, 34, 46, 63, 82], s: [["Audit", "Profile, site and competitors"], ["Foundation", "Profile, citations, on-page fixes"], ["Content", "Service pages and posts"], ["Reviews", "Request and respond process"], ["Review", "Report and next steps"]] }, { n: "Google Ads campaign", b: "Add the starting point: spend, clicks, conversion state.", a: "Add the outcome after restructuring and testing.", v: [30, 28, 44, 58, 70], s: [["Research", "Keywords and intent"], ["Structure", "Campaigns and ads"], ["Landing", "Page alignment"], ["Test", "Ad and bid tests"], ["Scale", "Keep what works"]] }];
-const F = [{ n: "Expense management app", st: "Java, Spring Boot, PostgreSQL, JWT, REST", L: [["Client", "Dashboard for adding and reviewing expenses by team."], ["API", "REST endpoints for expenses, categories, teams and reports."], ["Service", "Spring Boot business rules, validation and role checks."], ["Database", "PostgreSQL via Hibernate and JPA with indexed queries."], ["Auth", "JWT login, role-based access for admin and member."]], core: "Team management, expense tracking, dashboard", ch: "Describe a hard problem you met.", so: "Describe how you solved it." }, { n: "Team management system", st: "Java, Spring Boot, PostgreSQL, JWT", L: [["Client", "Pages for members, tasks and progress."], ["API", "REST endpoints for members, projects and tasks."], ["Service", "Assignment logic and permissions."], ["Database", "Relational schema for teams and tasks."], ["Auth", "JWT with refresh and roles."]], core: "Members, tasks, dashboards", ch: "Describe a hard problem you met.", so: "Describe how you solved it." }];
-const SV = [["Web Development", "Business sites, landing pages and custom web solutions that load fast and are easy for you to update."], ["Full Stack Development", "Complete applications in Java and Spring Boot, with REST APIs, PostgreSQL and secure login."], ["Digital Marketing", "Local SEO, Google Business Profile, Google Ads and content, so the right people find you."], ["WordPress Development", "Themes, WooCommerce stores and edits you can manage without a developer."], ["Website Optimization", "Speed, structure and search fixes on a site you already have."]];
-const R = [["Summary", "A Full Stack Developer and Digital Professional. Add your three-line summary here."], ["Experience", "AWD, Full Stack Developer, Dec - 2025 To Sep - 2026. Add your key contributions."], ["Skills", "Java, Spring Boot, REST APIs, Hibernate, JPA, SQL, JavaScript, HTML, CSS, Git, WordPress, WooCommerce, SEO, Google Ads."], ["Education", "Degree, Institution, Year."], ["Certifications", "Add certifications and issuers."], ["Projects", "See the Projects section above."]];
-/* ================================== */
-const H = (a, f) => a.map(f).join("");
-// nav
-const nav = $("#nav"); $("#mb").onclick = e => { const o = nav.classList.toggle("o"); e.target.setAttribute("aria-expanded", o) }; nav.onclick = () => nav.classList.remove("o");
-$("#yr").textContent = new Date().getFullYear();
-// scroll: progress, bg movement, active link
-const links = $$("nav a"), secs = links.map(a => $(a.getAttribute("href")));
-addEventListener("scroll", () => { const y = scrollY, h = document.documentElement.scrollHeight - innerHeight; $("#bar").style.transform = `scaleX(${y / h})`; document.documentElement.style.setProperty("--sy", y); const p = y + innerHeight / 3; secs.forEach((s, i) => links[i].classList.toggle("on", s.offsetTop <= p && s.offsetTop + s.offsetHeight > p)) }, { passive: true });
-// reveal + counters + bars
-const io = new IntersectionObserver(es => es.forEach(e => { if (!e.isIntersecting) return; e.target.classList.add("in"); io.unobserve(e.target) }), { threshold: .15 });
-const watch = () => $$(".rv:not(.in),.sl:not(.in),.bars:not(.in)").forEach(el => io.observe(el));
-$$("[data-count]").forEach(el => { const t = +el.dataset.count; if (!t) return; new IntersectionObserver(([e], o) => { if (!e.isIntersecting) return; o.disconnect(); let s = null; const f = n => { s ??= n; const p = Math.min((n - s) / 1200, 1); el.textContent = Math.round(t * p); p < 1 && requestAnimationFrame(f) }; requestAnimationFrame(f) }).observe(el) });
-// hero preview parallax + cursor
-const pv = $("#pv"), cur = $("#cur");
-if (matchMedia("(pointer:fine)").matches) {
-    let x = 0, y = 0, cx = 0, cy = 0; addEventListener("mousemove", e => { x = e.clientX; y = e.clientY; cur.style.opacity = 1; const r = innerWidth / 2, q = innerHeight / 2; pv.style.transform = `translate(${(x - r) / -60}px,${(y - q) / -60}px)` });
-    (function t() { cx += (x - cx) * .18; cy += (y - cy) * .18; cur.style.transform = `translate(${cx - 17}px,${cy - 17}px)`; requestAnimationFrame(t) })();
-    document.addEventListener("mouseover", e => cur.classList.toggle("h", !!e.target.closest("a,button,.ba")))
+const menuToggle = document.querySelector("#menuToggle");
+const siteNav = document.querySelector("#siteNav");
+const scrollProgress = document.querySelector("#scrollProgress");
+
+if (menuToggle && siteNav) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.textContent = isOpen ? "Close" : "Menu";
+  });
+
+  siteNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "Menu";
+    });
+  });
 }
-// tabs helper
-const tabs = (box, items, cb, cls = "tab") => { box.innerHTML = H(items, (x, i) => `<button class="${cls}" role="tab">${x}</button>`); const b = $$("button", box); const go = i => { b.forEach((n, j) => { n.classList.toggle("on", i == j); n.setAttribute("aria-selected", i == j) }); cb(i) }; b.forEach((n, i) => n.onclick = () => go(i)); go(0) };
-// journey
-tabs($("#jt"), J.map(x => x[0]), i => { $("#jp").innerHTML = `<h3>${J[i][1]}</h3><div><p>${J[i][2]}</p></div>` }, "");
-// skills
-tabs($("#skt"), Object.keys(S), i => { const l = $("#skl"); l.classList.remove("in"); l.innerHTML = H(S[Object.keys(S)[i]], s => { const [n, v] = s.split(":"); return `<div class="sr"><span>${n}</span><i style="--l:${v}%"></i></div>` }); requestAnimationFrame(() => requestAnimationFrame(() => l.classList.add("in"))) });
-// web dev
-const dl = (a) => `<dl class="det">${H(a, x => `<dt>${x[0]}</dt><dd>${x[1]}</dd>`)}</dl>`;
-$("#wi").innerHTML = H(W, (p, i) => `<li><button>${p.n}<small>${p.k}</small></button></li>`);
-const wb = $$("#wi button"), wsel = i => { wb.forEach((b, j) => b.classList.toggle("on", i == j)); const p = W[i]; const w = $("#wp"); w.style.animation = "none"; w.offsetWidth; w.style.animation = ""; w.innerHTML = `<div class="mock"><div class="tb"><u></u><u></u><u></u><span>${p.n.toLowerCase().replace(/ /g, "")}.com</span></div><div class="bd"><s class="a"></s><s class="h"></s><s style="width:85%"></s><s style="width:60%"></s></div></div><p>${p.d}</p>${dl([["Client", p.c], ["Role", p.r], ["Key features", p.f], ["Outcome", p.o]])}<dt class="mut" style="font-size:.78rem;margin-top:14px">Technologies</dt><div class="tags">${p.t.split(", ").map(t => `<span>${t}</span>`).join("")}</div><p style="margin-top:18px"><a class="btn o" href="${p.l}">View live site</a></p>` };
-wb.forEach((b, i) => { b.onmouseenter = b.onclick = () => wsel(i) }); wsel(0);
-// marketing
-tabs($("#mt"), M.map(m => m.n), i => { const m = M[i]; $("#mp").innerHTML = `<div><div class="ba" id="ba"><div><b>Before</b>${m.b}</div><div class="af"><b>After</b>${m.a}</div><span class="hd"></span><input type="range" min="0" max="100" value="50" aria-label="Compare before and after"></div><p class="mut" style="font-size:.8rem;margin-top:8px">Illustrative growth below. Replace with your real figures.</p><div class="bars" id="bs">${H(m.v, v => `<i data-h="${v}"></i>`)}</div></div><div><h3>Case study</h3><p style="margin-top:12px">Add the story: the business, the problem, the plan and what changed.</p></div>`; $("#ms").innerHTML = H(m.s, x => `<div><b>${x[0]}</b>${x[1]}</div>`); const ba = $("#ba"); $("input", ba).oninput = e => ba.style.setProperty("--p", e.target.value + "%"); setTimeout(() => $$("#bs i").forEach(e => e.style.height = e.dataset.h + "%"), 60) });
-// full stack
-let fi = 0, fl = 0; const fr = () => { const p = F[fi]; $("#fa").innerHTML = H(p.L, (l, i) => `<button class="${i == fl ? "on" : ""}">${l[0]}</button>`); $$("#fa button").forEach((b, i) => b.onclick = () => { fl = i; fr() }); $("#fp").innerHTML = `<div><h3>${p.L[fl][0]}</h3><p style="margin-top:10px">${p.L[fl][1]}</p>${dl([["Core features", p.core], ["Challenge", p.ch], ["Solution", p.so]])}</div><div><dl class="det"><dt>Technology stack</dt></dl><div class="tags">${p.st.split(", ").map(t => `<span>${t}</span>`).join("")}</div><p style="margin-top:18px"><a class="btn o" href="#">View source</a></p></div>` };
-tabs($("#ft"), F.map(f => f.n), i => { fi = i; fl = 0; fr() });
-// services
-$("#sv").innerHTML = H(SV, s => `<button aria-expanded="false"><h3>${s[0]}</h3><div class="x"><div><p>${s[1]}</p></div></div></button>`);
-$$("#sv button").forEach(b => b.onclick = () => { const o = b.classList.contains("on"); $$("#sv button").forEach(x => { x.classList.remove("on"); x.setAttribute("aria-expanded", false) }); if (!o) { b.classList.add("on"); b.setAttribute("aria-expanded", true) } });
-// resume
-tabs($("#rt"), R.map(r => r[0]), i => { $("#rp").innerHTML = `<div><h3>${R[i][0]}</h3><p>${R[i][1]}</p></div>` });
-// contact (opens email client; no server needed)
-$("#cf").onsubmit = e => { e.preventDefault(); const f = new FormData(e.target), b = `Name: ${f.get("n")}%0D%0APhone: ${f.get("p")}%0D%0AProject: ${f.get("t")}%0D%0A%0D%0A${encodeURIComponent(f.get("m"))}`; location.href = `mailto:shaiknazeer141914@gmail.com?subject=${encodeURIComponent(f.get("t") + " enquiry from " + f.get("n"))}&body=${b}`; $("#cm").textContent = "Opening your email app to send this message." };
-watch();
+
+function updateScrollProgress() {
+  if (!scrollProgress) return;
+  const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+  scrollProgress.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
+}
+window.addEventListener("scroll", updateScrollProgress, { passive: true });
+window.addEventListener("resize", updateScrollProgress);
+updateScrollProgress();
+
+const revealItems = document.querySelectorAll(".reveal");
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+const filterButtons = document.querySelectorAll(".filter-button");
+const projectCards = document.querySelectorAll(".project-card");
+const projectCount = document.querySelector("#projectCount");
+
+function applyProjectFilter(filter) {
+  let visibleCount = 0;
+  projectCards.forEach((card) => {
+    const shouldShow = filter === "all" || card.dataset.category === filter;
+    card.hidden = !shouldShow;
+    if (shouldShow) visibleCount += 1;
+  });
+  if (projectCount) {
+    projectCount.textContent = `${visibleCount} project${visibleCount === 1 ? "" : "s"}`;
+  }
+  filterButtons.forEach((button) => {
+    const active = button.dataset.filter === filter;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+}
+
+filterButtons.forEach((button) => {
+  button.addEventListener("click", () => applyProjectFilter(button.dataset.filter));
+});
+applyProjectFilter("all");
+
+const year = document.querySelector("#year");
+if (year) year.textContent = new Date().getFullYear();
+
+const contactForm = document.querySelector("#contactForm");
+const formNote = document.querySelector("#formNote");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const data = new FormData(contactForm);
+    const name = String(data.get("name") || "").trim();
+    const email = String(data.get("email") || "").trim();
+    const projectType = String(data.get("projectType") || "").trim();
+    const message = String(data.get("message") || "").trim();
+    const subject = encodeURIComponent(`${projectType} enquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nProject type: ${projectType}\n\nProject details:\n${message}`
+    );
+    if (formNote) formNote.textContent = "Your email app should open with the message prepared. Please review and send it there.";
+    window.location.href = `mailto:shaiknazeer141914@gmail.com?subject=${subject}&body=${body}`;
+  });
+}

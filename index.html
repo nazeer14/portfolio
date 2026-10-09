@@ -1,261 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>Shaik Nazeer | Full Stack Developer & Digital Professional</title>
-    <meta name="description"
-        content="Full Stack Developer and Digital Professional building websites, Java and Spring Boot applications, and search-led marketing for growing businesses.">
-    <meta property="og:title" content="Your Name | Full Stack Developer & Digital Professional">
-    <meta property="og:description"
-        content="Web development, full stack applications and digital marketing, shown as case studies.">
-    <meta property="og:type" content="website">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Schibsted+Grotesk:wght@400;500;600&display=swap"
-        rel="stylesheet">
-    <script
-        type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Your Name","jobTitle":"Full Stack Developer","description":"Full Stack Developer and Digital Professional","url":"https://example.com","email":"mailto:you@example.com","sameAs":["https://www.linkedin.com/in/yourname","https://github.com/yourname"],"knowsAbout":["Java","Spring Boot","REST APIs","WordPress","SEO","Google Ads"]}</script>
-    <style>
-        @import url("/style.css");
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Portfolio of Shaik Nazeer — full stack development, websites, e-commerce, and digital marketing projects.">
+  <meta property="og:title" content="Shaik Nazeer | Developer Portfolio">
+  <meta property="og:description" content="Selected work across full stack development, websites, e-commerce, and digital marketing.">
+  <meta property="og:type" content="website">
+  <title>Shaik Nazeer — Developer & Digital Professional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
-    <div class="grid" aria-hidden="true"></div>
-    <div id="cur" aria-hidden="true"></div>
-    <header>
-        <div class="wrap"><a class="logo" href="#home">Shaik Nazeer</a><button id="mb" aria-label="Toggle menu"
-                aria-expanded="false">Menu</button>
-            <nav id="nav" aria-label="Main"><a href="#home">Home</a><a href="#about">About</a><a
-                    href="#journey">Journey</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a
-                    href="#experience">Experience</a><a href="#services">Services</a><a href="#contact">Contact</a>
-            </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Shaik Nazeer home"><span class="brand-mark">SN</span><span>Shaik Nazeer<span class="brand-sub">Developer Portfolio</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav id="siteNav" aria-label="Main navigation">
+        <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact" class="nav-cta">Let's talk <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+    <div class="scroll-progress" id="scrollProgress"></div>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> FULL STACK DEVELOPMENT · WEB · DIGITAL</p>
+          <h1>Thoughtful digital work.<br><span>Built to work</span> for people.</h1>
+          <p class="hero-lead">I’m Shaik Nazeer, a developer working across Java and Spring Boot applications, business websites, e-commerce, and digital visibility.</p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="text-link" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="hero-meta"><span>Based in Hyderabad, India</span><span>Available for project conversations</span></div>
         </div>
-        <div id="bar"></div>
-    </header>
-    <main>
-        <section id="home">
-            <div class="wrap hero">
-                <div>
-                    <h1><span><i>Full Stack Developer</i></span><span><i>and Digital
-                                Professional.</i></span><span><i>Built to be found, used, trusted.</i></span></h1>
-                    <p class="lead">I build websites, Java and Spring Boot applications, and the search and advertising
-                        work that brings people to them. One person across code and visibility, so nothing gets lost
-                        between teams.</p>
-                    <div class="cta"><a class="btn" href="#projects">View projects</a><a class="btn o"
-                            href="#contact">Start a conversation</a></div>
-                    <div class="stats" id="stats">
-                        <div><b data-count="">2+</b><small>Years building</small></div>
-                        <div><b data-count="">20+</b><small>Projects delivered</small></div>
-                        <div><b data-count="">15+</b><small>Client sites optimised</small></div>
-                    </div>
-                </div>
-                <a class="pv" href="#projects" id="pv" aria-label="Selected project preview">
-                    <div class="mock">
-                        <div class="tb"><u></u><u></u><u></u><span>covibe.in</span></div>
-                        <div>
-                            <img src="/assets/Screenshot 2026-02-02 164621.png" alt="Project Image" style="height: 300px; object-fit: contain;  width: 100%; object-position: center; "></div>
-                    </div>
-                    <div class="pvc">Selected project: replace with your strongest case study</div>
-                </a>
+        <div class="hero-art reveal" aria-label="Portfolio overview">
+          <div class="art-topline"><span>SELECTED WORK</span><span>2025 — 2026</span></div>
+          <div class="art-window">
+            <div class="window-bar"><i></i><i></i><i></i><span>digital-work / overview</span></div>
+            <div class="window-content">
+              <div class="window-kicker">IDEAS INTO DIGITAL PRODUCTS</div>
+              <div class="window-title">Plan clearly.<br>Build carefully.</div>
+              <div class="window-rule"></div>
+              <div class="window-row"><span>01 / Applications</span><b>Java · Spring Boot</b></div>
+              <div class="window-row"><span>02 / Websites</span><b>WordPress · E-commerce</b></div>
+              <div class="window-row"><span>03 / Visibility</span><b>SEO · Digital marketing</b></div>
             </div>
-        </section>
-
-        <section id="about">
-            <div class="wrap">
-                <div class="sh rv">
-                    <h2>Who I am</h2>
-                    <p class="mut">A developer who understands the business behind the website.</p>
-                </div>
-                <div class="ab">
-                    <div class="rv">
-                        <p>I am a Full Stack Developer and Digital Professional. I build the interface, the API behind
-                            it and the search presence around it, so a project is judged on how well it works for the
-                            business, not only on how it looks.</p>
-                        <p>My approach is simple: understand the goal, choose the plainest tool that solves it, build it
-                            carefully and explain every decision in clear language.</p>
-                    </div>
-                    <ul class="rv">
-                        <li><b>Strengths</b>Java backends, WordPress builds, local search</li>
-                        <li><b>Approach</b>Plain scope, regular updates, no surprises</li>
-                        <li><b>Value to clients</b>One accountable person from idea to ranking</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="journey">
-            <div class="wrap">
-                <div class="sh rv">
-                    <h2>My journey</h2>
-                    <p class="mut">Select a chapter.</p>
-                </div>
-                <div class="jt" id="jt" role="tablist"></div>
-                <div class="jp" id="jp" aria-live="polite"></div>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="wrap">
-                <div class="sh rv">
-                    <h2>What I know</h2>
-                    <p class="mut">Grouped by the job each skill does.</p>
-                </div>
-                <div class="sk">
-                    <div class="tabs" id="skt"></div>
-                    <div class="sl" id="skl"></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="wrap">
-                <div class="sh rv">
-                    <h2>What I have built</h2>
-                    <p class="mut">Three disciplines, three ways of showing the work. Open any project for the full
-                        case.</p>
-                </div>
-                <div class="cat">
-                    <h3><em>01</em>Web Development</h3>
-                    <p class="mut">Websites, WordPress, WooCommerce, landing pages, property and booking sites.</p>
-                    <div class="wd">
-                        <ul class="idx" id="wi"></ul>
-                        <div class="pane" id="wp"></div>
-                    </div>
-                </div>
-                <div class="cat">
-                    <h3><em>02</em>Digital Marketing</h3>
-                    <p class="mut">Local SEO, Google Business Profile, Google Ads and social. Drag the divider to
-                        compare.</p>
-                    <div class="mkb">
-                        <div class="mkt" id="mt"></div>
-                        <div class="mk2" id="mp"></div>
-                        <div class="stl" id="ms"></div>
-                    </div>
-                </div>
-                <div class="cat">
-                    <h3><em>03</em>Full Stack Development</h3>
-                    <p class="mut">Java, Spring Boot, REST APIs, PostgreSQL and JWT. Select a layer to see how it works.
-                    </p>
-                    <div class="fs">
-                        <div class="mkt" id="ft"></div>
-                        <div class="arch" id="fa"></div>
-                        <div class="fsd" id="fp"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <div class="wrap">
-                <div class="sh rv">
-                    <h2>Experience</h2>
-                    <p class="mut">Where the work happened.</p>
-                </div>
-                <div class="ex rv">
-                    <div>
-                        <h3>Company name</h3><span class="mut">Position, Start – End</span>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Core responsibility one.</li>
-                            <li>Core responsibility two.</li>
-                        </ul>
-                        <p><b>Major contribution:</b> describe one result you owned.</p>
-                        <div class="tags"><span>Java</span><span>Spring Boot</span><span>SQL</span></div>
-                    </div>
-                </div>
-                <div class="ex rv">
-                    <div>
-                        <h3>Company name</h3><span class="mut">Position, Start – End</span>
-                    </div>
-                    <div>
-                        <ul>
-                            <li>Core responsibility one.</li>
-                            <li>Core responsibility two.</li>
-                        </ul>
-                        <p><b>Major contribution:</b> describe one result you owned.</p>
-                        <div class="tags"><span>WordPress</span><span>SEO</span><span>Google Ads</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="wrap">
-                <div class="sh rv">
-                    <h2>What you can hire me for</h2>
-                    <p class="mut">Each can stand alone or combine.</p>
-                </div>
-                <div class="sv" id="sv"></div>
-                <div class="why">
-                    <div class="rv"><b>Clear communication</b>
-                        <p>You always know what is done and what is next.</p>
-                    </div>
-                    <div class="rv"><b>Attention to detail</b>
-                        <p>Spacing, edge cases, metadata. Checked before you see it.</p>
-                    </div>
-                    <div class="rv"><b>Practical solutions</b>
-                        <p>The simplest approach that meets the goal.</p>
-                    </div>
-                    <div class="rv"><b>Reliable development</b>
-                        <p>Version-controlled, tested, documented handover.</p>
-                    </div>
-                    <div class="rv"><b>Continuous learning</b>
-                        <p>I keep my stack current so you do not inherit old choices.</p>
-                    </div>
-                    <div class="rv"><b>Client-focused thinking</b>
-                        <p>Decisions tied to your customers and revenue.</p>
-                    </div>
-                </div>
-                <div style="margin-top:80px" class="rv">
-                    <div class="sh">
-                        <h2>Profile and resume</h2>
-                        <p><a class="btn" href="resume.pdf" download>Download resume</a></p>
-                    </div>
-                    <div class="rs">
-                        <div class="tabs" id="rt"></div>
-                        <div class="rb" id="rp"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="wrap ct">
-                <div class="rv">
-                    <h2>Have a project in mind? Let's build something valuable.</h2>
-                    <p class="mut" style="margin-top:24px">Tell me what you need and I will reply with next steps.</p>
-                    <p><a href="mailto:shaiknazeer141914@gmail.com" style="color: #3f03a6; text-decoration: none; font-size:x-large;">shaiknazeer141914@gmail.com</a><br><a href="tel:+918008398263" style="color: #3f03a6; text-decoration: none; font-size:x-large;">+91 80083 98263</a></p>
-                </div>
-                <form id="cf" class="rv"><label>Name<input name="n" required
-                            autocomplete="name"></label><label>Email<input type="email" name="e" required
-                            autocomplete="email"></label><label>Phone<input type="tel" name="p"
-                            autocomplete="tel"></label><label>Project type<select name="t">
-                            <option>Web Development</option>
-                            <option>Full Stack Development</option>
-                            <option>Digital Marketing</option>
-                            <option>WordPress Development</option>
-                            <option>Website Optimization</option>
-                        </select></label><label>Message<textarea name="m" rows="4" required></textarea></label><button
-                        class="btn" type="submit">Send message</button><small class="mut" id="cm"></small></form>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="wrap">
-            <div><b>Shaik Nazeer</b><br><span class="mut">Full Stack Developer and Digital Professional</span></div>
-            <div><a href="#home">Home</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
-            <div><a href="mailto:shaiknazeer141914@gmail.com">Email</a><a href="https://www.linkedin.com/in/nazeer-shaik14">LinkedIn</a><a
-                    href="https://github.com/nazeer14">GitHub</a></div>
-            <div class="mut">&copy; <span id="yr"></span> Shaik Nazeer</div>
+          </div>
+          <div class="art-note"><span class="note-number">01</span><span>Code, experience, and business goals — considered together.</span></div>
+          <div class="art-orbit" aria-hidden="true"></div>
         </div>
-    </footer>
-    <script src="/script.js" type="module"></script>
+      </div>
+    </section>
+
+    <section class="intro-strip">
+      <div class="container strip-grid">
+        <p>MY FOCUS</p><span>Useful products</span><span>Clear interfaces</span><span>Maintainable code</span><span>Business outcomes</span>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container two-column">
+        <div class="section-heading reveal"><p class="eyebrow">01 / ABOUT</p><h2>Development with<br>a practical point of view.</h2></div>
+        <div class="about-copy reveal">
+          <p class="large-copy">I enjoy turning business needs into useful digital experiences — from the interface people use to the APIs and systems that support it.</p>
+          <p>My work spans Java and Spring Boot development, WordPress websites, e-commerce, and digital marketing. I value clear communication, careful implementation, and solutions that are straightforward to maintain.</p>
+          <div class="principles">
+            <div><span>01</span><b>Understand the goal</b><p>Start with the user and the business need.</p></div>
+            <div><span>02</span><b>Build with care</b><p>Keep the structure clear and the experience useful.</p></div>
+            <div><span>03</span><b>Communicate clearly</b><p>Make progress, decisions, and next steps visible.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">02 / CAPABILITIES</p><h2>Tools for different<br>parts of the problem.</h2><p class="section-intro">A practical toolkit across application development, websites, and digital growth.</p></div>
+        <div class="skill-grid">
+          <article class="skill-card reveal"><span class="card-index">A</span><h3>Full Stack Development</h3><p>Building application features, server-side logic, and data-backed workflows.</p><div class="chips"><span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>Hibernate / JPA</span><span>SQL</span><span>React</span><span>Git</span></div></article>
+          <article class="skill-card reveal"><span class="card-index">B</span><h3>Web & E-commerce</h3><p>Business websites and online stores designed around clarity and usability.</p><div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span><span>WooCommerce</span><span>PHP</span></div></article>
+          <article class="skill-card reveal"><span class="card-index">C</span><h3>Digital Marketing</h3><p>Helping businesses improve discoverability and communicate their offer.</p><div class="chips"><span>SEO</span><span>Google Business Profile</span><span>Google Ads</span><span>Meta Ads</span><span>Content</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="projects-header">
+          <div class="section-heading reveal"><p class="eyebrow">03 / PROJECTS</p><h2>A selection of work<br>across disciplines.</h2></div>
+          <p class="section-intro reveal">Projects and project types from my portfolio. Use the filters to explore each area. Live links and performance figures can be added where available.</p>
+        </div>
+        <div class="project-toolbar reveal">
+          <div class="filter-list" role="group" aria-label="Filter projects">
+            <button class="filter-button active" data-filter="all" aria-pressed="true">All projects <span>20</span></button>
+            <button class="filter-button" data-filter="app" aria-pressed="false">Applications</button>
+            <button class="filter-button" data-filter="website" aria-pressed="false">Websites</button>
+            <button class="filter-button" data-filter="ecommerce" aria-pressed="false">E-commerce</button>
+            <button class="filter-button" data-filter="marketing" aria-pressed="false">Digital marketing</button>
+            <button class="filter-button" data-filter="creative" aria-pressed="false">Creative</button>
+          </div>
+          <p class="project-count" id="projectCount" aria-live="polite">20 projects</p>
+        </div>
+        <div class="project-grid" id="projectGrid">
+          <article class="project-card project-featured" data-category="app">
+            <div class="project-visual visual-accountant"><span class="visual-label">SAAS PRODUCT</span><div class="dashboard-preview"><div class="dash-sidebar"></div><div class="dash-main"><i></i><i></i><div class="dash-chart"></div><div class="dash-metrics"><b></b><b></b><b></b></div></div></div><span class="visual-foot">01 / APPLICATIONS</span></div>
+            <div class="project-info"><div class="project-topline"><span>Full Stack Application</span><span>01</span></div><h3>My Accountant Application</h3><p>An accountant SaaS product concept for managing financial activity and related workflows.</p><div class="chips"><span>Spring Boot</span><span>React</span><span>SQL</span><span>AWS</span></div><span class="project-status">Project overview · Details available on request</span></div>
+          </article>
+          <article class="project-card" data-category="app"><div class="project-visual visual-milk"><span class="visual-label">ORDERING PLATFORM</span><div class="milk-bottle"><i></i><b>MAA<br>MILK</b></div><div class="visual-caption">Fresh milk.<br>Simple ordering.</div><span class="visual-foot">02 / APPLICATIONS</span></div><div class="project-info"><div class="project-topline"><span>Full Stack Application</span><span>02</span></div><h3>Maa Milk</h3><p>An online milk-selling application for product browsing and ordering.</p><div class="chips"><span>Java</span><span>Spring Boot</span><span>React</span><span>SQL</span><span>AWS</span></div></div></article>
+          <article class="project-card" data-category="app"><div class="project-visual visual-lease"><span class="visual-label">BOOKING PLATFORM</span><div class="lease-panel"><small>LEASECO / BOOKING</small><b>Find the right<br>worker for the job.</b><div class="lease-lines"><i></i><i></i><i></i></div></div><span class="visual-foot">03 / APPLICATIONS</span></div><div class="project-info"><div class="project-topline"><span>Full Stack Application</span><span>03</span></div><h3>LeaseCo</h3><p>An online worker-booking application concept.</p><div class="chips"><span>Spring Boot</span><span>React</span><span>SQL</span><span>AWS</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-brar"><span class="visual-label">CANADA</span><div class="type-layout"><small>BRAR CONTRACTING</small><b>Move your<br>business forward.</b><span>TRUCK BOOKING</span></div><span class="visual-foot">04 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Business Website</span><span>04</span></div><h3>BrarContracting</h3><p>Truck-booking website project for a Canadian business.</p><div class="chips"><span>Website design</span><span>Booking</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-covibe"><span class="visual-label">HYDERABAD</span><div class="covibe-preview"><b>co<span>vibe</span></b><small>SPACE TO DO YOUR BEST WORK.</small><div class="office-blocks"><i></i><i></i><i></i></div></div><span class="visual-foot">05 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Workspace Website</span><span>05</span></div><h3>Covibe</h3><p>Website project for a coworking space and flexible office provider.</p><div class="chips"><span>Website design</span><span>WordPress</span><span>Digital marketing</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-school"><span class="visual-label">EDUCATION</span><div class="school-preview"><small>DHARMAKSETRA INTERNATIONAL SCHOOL</small><b>Learn today.<br>Lead tomorrow.</b><i></i></div><span class="visual-foot">06 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>School Website</span><span>06</span></div><h3>Dharmaksetra International School</h3><p>Website project for a school based in Machilipatnam.</p><div class="chips"><span>Website design</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-agency"><span class="visual-label">AGENCY WEBSITE</span><div class="agency-preview"><small>WEBDIGITALADS</small><b>Digital that<br>moves business.</b><div><i></i><i></i><i></i></div></div><span class="visual-foot">07 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Agency Website</span><span>07</span></div><h3>WebDigitalAds</h3><p>Website project for a digital marketing agency in Hyderabad.</p><div class="chips"><span>Website design</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-barber"><span class="visual-label">CANADA</span><div class="barber-preview"><small>THE BARBER LOUNGE</small><b>Sharp style.<br>Easy booking.</b><span>BOOK AN APPOINTMENT</span></div><span class="visual-foot">08 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Booking Website</span><span>08</span></div><h3>The Barber Lounge</h3><p>Barber shop website project with an online booking focus.</p><div class="chips"><span>Website design</span><span>Online booking</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-localmap"><span class="visual-label">LOCAL VISIBILITY</span><div class="localmap-preview"><small>LOCALMAP</small><b>Be visible<br>where it matters.</b><div class="map-lines"><i></i><i></i><i></i><i></i></div></div><span class="visual-foot">09 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Service Agency Website</span><span>09</span></div><h3>LocalMap</h3><p>Website project for a Google Business Profile service agency in Hyderabad.</p><div class="chips"><span>Website design</span><span>Local SEO</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-lowcost"><span class="visual-label">WEB SERVICES</span><div class="minimal-preview"><b>LOW COST<br>WEB DESIGNING</b><span>WEBSITES FOR BUSINESS</span></div><span class="visual-foot">10 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Agency Website</span><span>10</span></div><h3>Low Cost Web Designing</h3><p>Website project for a web development agency in Hyderabad.</p><div class="chips"><span>Website design</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-domain"><span class="visual-label">DIGITAL AGENCY</span><div class="domain-preview"><b>5g<span>Domain</span></b><small>YOUR DIGITAL GROWTH PARTNER</small></div><span class="visual-foot">11 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>Agency Website</span><span>11</span></div><h3>5gDomain</h3><p>Website project for a digital marketing agency in Hyderabad.</p><div class="chips"><span>Website design</span></div></div></article>
+          <article class="project-card" data-category="website"><div class="project-visual visual-school2"><span class="visual-label">EDUCATION</span><div class="school2-preview"><small>SREE CHETHANA SCHOOL</small><b>A place to<br>grow and learn.</b><i></i></div><span class="visual-foot">12 / WEBSITES</span></div><div class="project-info"><div class="project-topline"><span>School Website</span><span>12</span></div><h3>Sree Chethana School</h3><p>Website project for a school in Nalgonda.</p><div class="chips"><span>Website design</span></div></div></article>
+          <article class="project-card" data-category="ecommerce"><div class="project-visual visual-colorchrome"><span class="visual-label">E-COMMERCE · CANADA</span><div class="shop-preview"><small>COLORCHROME</small><b>Find your<br>next favourite.</b><div class="product-shapes"><i></i><i></i><i></i></div></div><span class="visual-foot">13 / E-COMMERCE</span></div><div class="project-info"><div class="project-topline"><span>Online Shopping</span><span>13</span></div><h3>ColorChrome</h3><p>Online shopping project for a Canadian business.</p><div class="chips"><span>E-commerce</span><span>Online store</span></div></div></article>
+          <article class="project-card" data-category="ecommerce"><div class="project-visual visual-nxtzen"><span class="visual-label">E-COMMERCE · CANADA</span><div class="nxtzen-preview"><small>NXTZEN</small><b>Simple choices.<br>Better everyday.</b><div class="nxtzen-circles"><i></i><i></i><i></i></div></div><span class="visual-foot">14 / E-COMMERCE</span></div><div class="project-info"><div class="project-topline"><span>Online Shopping</span><span>14</span></div><h3>NxtZen</h3><p>Online shopping project for a Canadian business.</p><div class="chips"><span>E-commerce</span><span>Online store</span></div></div></article>
+          <article class="project-card" data-category="ecommerce"><div class="project-visual visual-quickrent"><span class="visual-label">HYDERABAD</span><div class="quickrent-preview"><small>QUICKRENT</small><b>Find a space<br>for your next move.</b><div class="space-cards"><i></i><i></i></div></div><span class="visual-foot">15 / E-COMMERCE</span></div><div class="project-info"><div class="project-topline"><span>Commercial Space Booking</span><span>15</span></div><h3>QuickRent</h3><p>Online commercial-space booking project in Hyderabad.</p><div class="chips"><span>Booking</span><span>Listings</span></div></div></article>
+          <article class="project-card" data-category="ecommerce"><div class="project-visual visual-digitalprime"><span class="visual-label">DIGITAL BRAND</span><div class="prime-preview"><b>DIGITAL<span>PRIME</span></b><small>DESIGN · DEVELOPMENT · DIGITAL</small></div><span class="visual-foot">16 / E-COMMERCE</span></div><div class="project-info"><div class="project-topline"><span>Digital Project</span><span>16</span></div><h3>DigitalPrime</h3><p>Project included in the portfolio's e-commerce section; more details can be added when confirmed.</p><div class="chips"><span>Project details to confirm</span></div></div></article>
+          <article class="project-card" data-category="marketing"><div class="project-visual visual-marketing"><span class="visual-label">DIGITAL MARKETING</span><div class="marketing-preview"><small>COVIBE / VISIBILITY</small><b>Make the right<br>space easier to find.</b><div class="growth-line"><i></i><i></i><i></i><i></i><i></i></div></div><span class="visual-foot">17 / MARKETING</span></div><div class="project-info"><div class="project-topline"><span>Digital Marketing</span><span>17</span></div><h3>Covibe — Digital Marketing</h3><p>Digital marketing work for the Covibe coworking space brand.</p><div class="chips"><span>Local visibility</span><span>Content</span></div></div></article>
+          <article class="project-card" data-category="creative"><div class="project-visual visual-poster"><span class="visual-label">VISUAL COMMUNICATION</span><div class="poster-stack"><div><small>DESIGN STUDY / 01</small><b>Make it<br>clear.</b></div><div><small>DESIGN STUDY / 02</small><b>Make it<br>matter.</b></div></div><span class="visual-foot">18 / CREATIVE</span></div><div class="project-info"><div class="project-topline"><span>Graphic Design</span><span>18</span></div><h3>Poster Design</h3><p>Poster and promotional visual design work.</p><div class="chips"><span>Graphic design</span><span>Layout</span></div></div></article>
+          <article class="project-card" data-category="creative"><div class="project-visual visual-video"><span class="visual-label">VIDEO PRODUCTION</span><div class="video-preview"><div class="play-mark">▶</div><b>EDIT.<br>REFINE.<br>DELIVER.</b><small>VIDEO EDITING</small></div><span class="visual-foot">19 / CREATIVE</span></div><div class="project-info"><div class="project-topline"><span>Video</span><span>19</span></div><h3>Video Editing</h3><p>Video editing work for digital and promotional content.</p><div class="chips"><span>Editing</span><span>Storytelling</span></div></div></article>
+          <article class="project-card" data-category="creative"><div class="project-visual visual-ai"><span class="visual-label">GENERATIVE MEDIA</span><div class="ai-preview"><small>AI VIDEO</small><b>Ideas into<br>moving images.</b><div class="ai-frame"><i></i><i></i><i></i></div></div><span class="visual-foot">20 / CREATIVE</span></div><div class="project-info"><div class="project-topline"><span>AI-assisted Creative</span><span>20</span></div><h3>AI Video Generation</h3><p>AI-generated video concepts and creative experiments.</p><div class="chips"><span>AI video</span><span>Creative direction</span></div></div></article>
+        </div>
+        <p class="project-note">The project names and categories above are based on the supplied Projects document. This refresh uses designed previews rather than screenshots of live websites. Add verified live URLs, actual screenshots, and measured results before publishing them as case studies.</p>
+      </div>
+    </section>
+
+    <section class="section experience-section" id="experience">
+      <div class="container two-column">
+        <div class="section-heading reveal"><p class="eyebrow">04 / EXPERIENCE</p><h2>Work in progress.<br>Learning by building.</h2></div>
+        <div class="timeline reveal">
+          <article class="timeline-item"><span class="timeline-date">DEC 2025 — PRESENT</span><div><h3>Full Stack Developer</h3><p class="timeline-company">AI Web Design Services Pvt. Ltd.</p><p>Building REST APIs and contributing to web and application development work.</p><div class="chips"><span>Java</span><span>Spring Boot</span><span>REST APIs</span></div></div></article>
+          <article class="timeline-item"><span class="timeline-date">ONGOING</span><div><h3>Independent Projects & Practice</h3><p>Developing and exploring projects across websites, e-commerce, digital marketing, and full stack applications.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">05 / HOW I CAN HELP</p><h2>From first idea to<br>a more useful digital presence.</h2></div>
+        <div class="service-list">
+          <div class="service-row reveal"><span>01</span><h3>Website Design & Development</h3><p>Business websites, landing pages, and WordPress builds.</p><b>↗</b></div>
+          <div class="service-row reveal"><span>02</span><h3>Full Stack Development</h3><p>Java, Spring Boot, REST APIs, and database-backed features.</p><b>↗</b></div>
+          <div class="service-row reveal"><span>03</span><h3>E-commerce & Booking</h3><p>Online stores, listing experiences, and booking-oriented websites.</p><b>↗</b></div>
+          <div class="service-row reveal"><span>04</span><h3>Digital Marketing</h3><p>Local SEO, Google Business Profile, paid campaigns, and content.</p><b>↗</b></div>
+          <div class="service-row reveal"><span>05</span><h3>Website Improvements</h3><p>Content structure, usability, bug fixing, and practical enhancements.</p><b>↗</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section section" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal"><p class="eyebrow">06 / CONTACT</p><h2>Have a good problem<br>to solve?</h2><p>Share what you're building or improving. Let's discuss the goal and the next practical step.</p><a class="contact-email" href="mailto:shaiknazeer141914@gmail.com">shaiknazeer141914@gmail.com <span>↗</span></a><a class="contact-phone" href="tel:+918008398263">+91 80083 98263</a></div>
+        <form id="contactForm" class="contact-form reveal">
+          <label for="name">Your name<input id="name" name="name" autocomplete="name" required></label>
+          <label for="email">Email address<input id="email" name="email" type="email" autocomplete="email" required></label>
+          <label for="projectType">What do you need?<select id="projectType" name="projectType"><option>Website development</option><option>Full stack development</option><option>E-commerce or booking</option><option>Digital marketing</option><option>Website improvement</option><option>Other</option></select></label>
+          <label for="message">A little about the project<textarea id="message" name="message" rows="4" required></textarea></label>
+          <button class="button button-light" type="submit">Prepare email <span aria-hidden="true">↗</span></button>
+          <p class="form-note" id="formNote" aria-live="polite">This opens your email app with the details filled in. No form data is stored on this website.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#home">Shaik Nazeer<span>Developer Portfolio</span></a><p>Building useful things for the web.</p><div class="footer-links"><a href="https://www.linkedin.com/in/nazeer-shaik14/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/nazeer14" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:shaiknazeer141914@gmail.com">Email ↗</a></div><small>© <span id="year"></span> Shaik Nazeer</small></div></footer>
 </body>
-
 </html>
